@@ -129,8 +129,71 @@ h1, h2, h3 {
 
 .site-nav {
   display: flex;
+  align-items: center;
   gap: 4px;
   flex-wrap: wrap;
+}
+
+.site-nav__dropdown {
+  position: relative;
+}
+
+.site-nav__dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.site-nav__parent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-nav__parent::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .18s ease;
+}
+
+.site-nav__dropdown:hover .site-nav__parent::after,
+.site-nav__dropdown:focus-within .site-nav__parent::after {
+  margin-top: 3px;
+  transform: rotate(225deg);
+}
+
+.site-nav__submenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  z-index: 20;
+  display: grid;
+  min-width: 126px;
+  gap: 2px;
+  padding: 8px;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(255, 255, 255, .98);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(24, 43, 71, .14);
+  transform: translate(-50%, -6px);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+}
+
+.site-nav__dropdown:hover .site-nav__submenu,
+.site-nav__dropdown:focus-within .site-nav__submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .site-nav a {
@@ -150,6 +213,19 @@ h1, h2, h3 {
   background: var(--accent-weak);
   color: var(--accent-deep);
   font-weight: 600;
+}
+
+.site-nav__dropdown.is-current > .site-nav__parent {
+  background: var(--accent-weak);
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+.site-nav__submenu a {
+  padding: 8px 12px;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
 }
 
 /* ---------- 首页：导航栏融进展示图片上方 ---------- */
