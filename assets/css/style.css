@@ -457,17 +457,30 @@ h1, h2, h3 {
 }
 
 .shot {
-  display: grid;
-  place-items: center;
-  min-height: 180px;
-  margin: 18px 0 0;
-  padding: 24px;
-  font-size: 14px;
-  color: var(--muted);
-  text-align: center;
-  background: repeating-linear-gradient(135deg, #fbfdff, #fbfdff 12px, #f3f8fd 12px, #f3f8fd 24px);
-  border: 1px dashed var(--border-strong);
+  margin: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.shot img {
+  width: 100%;
+  height: auto;
+}
+
+.shot figcaption {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+.shot-gallery {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
 }
 
 .note-table {
