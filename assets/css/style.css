@@ -172,20 +172,23 @@ h1, h2, h3 {
 
 .site-nav__submenu {
   position: absolute;
-  top: calc(100% + 10px);
-  left: 50%;
+  top: calc(100% + 8px);
+  left: 0;
   z-index: 20;
-  display: grid;
-  min-width: 126px;
+  display: flex;
+  width: 148px;
+  flex-direction: column;
+  align-items: stretch;
   gap: 2px;
   padding: 8px;
   visibility: hidden;
   opacity: 0;
+  pointer-events: none;
   background: rgba(255, 255, 255, .98);
   border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: 0 14px 34px rgba(24, 43, 71, .14);
-  transform: translate(-50%, -6px);
+  transform: translateY(-6px);
   transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
 }
 
@@ -193,7 +196,8 @@ h1, h2, h3 {
 .site-nav__dropdown:focus-within .site-nav__submenu {
   visibility: visible;
   opacity: 1;
-  transform: translate(-50%, 0);
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .site-nav a {
