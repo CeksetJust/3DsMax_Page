@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3dsmax学习日志</title>
+  <meta name="description" content="3ds Max 学习日志：记录建模、材质、灯光与渲染的练习过程。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">3ds</span>
+        <span class="brand__name">3dsmax学习日志</span>
+      </a>
+      <nav class="site-nav" aria-label="站点导航">
+        <a href="index.html" aria-current="page">首页</a>
+        <a href="modeling.html">建模</a>
+        <a href="sofa.html">沙发</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 展示图片：放在主页最上方 -->
+    <section class="hero">
+      <figure class="hero__banner">
+        <img src="assets/img/hero-sofa.jpg"
+             alt="3ds Max 练习参考图：一个人物坐在沙发椅上的室内场景"
+             width="1920" height="1038">
+      </figure>
+
+      <div class="wrap">
+        <div class="hero__head">
+          <p class="hero__eyebrow">3ds Max · 学习记录</p>
+          <h1 class="hero__title">3dsmax学习日志</h1>
+          <p class="hero__lead">
+            这里记录我学 3ds Max 的过程：从最基础的建模开始，一点点把参考图里的东西做出来，
+            每一步的命令、参数和踩过的坑都写下来，方便以后回头查。
+          </p>
+          <ul class="tag-list">
+            <li>基础建模</li>
+            <li>家具练习</li>
+            <li>操作笔记</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 卡片入口 -->
+    <section class="cards" aria-labelledby="cards-title">
+      <div class="wrap">
+        <h2 class="section-title" id="cards-title">学习目录</h2>
+        <p class="section-desc">点击卡片进入对应的学习记录页。</p>
+
+        <div class="card-grid">
+          <a class="card" href="modeling.html">
+            <span class="card__index">01</span>
+            <h3 class="card__title">建模</h3>
+            <p class="card__desc">从基础命令开始，记录每一个建模练习的做法与心得。</p>
+            <span class="card__more">进入学习</span>
+          </a>
+
+          <!-- TODO: 后面新增学习方向时，复制这张卡片改标题、简介和 href -->
+          <div class="card card--todo" aria-disabled="true">
+            <span class="card__index">02</span>
+            <h3 class="card__title">待补充</h3>
+            <p class="card__desc">材质、灯光、渲染等方向的学习记录后续添加。</p>
+            <span class="card__more">暂未开放</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>© 2026 3dsmax学习日志</span>
+      <span class="site-footer__note">内容持续更新中</span>
+    </div>
+  </footer>
+
+  <script>
+    // 顶部导航叠在展示图片上方：把实际高度交给 CSS，滚动后再换成实底，避免挡到正文。
+    (function () {
+      var header = document.querySelector('.site-header');
+      if (!header) return;
+
+      function sync() {
+        document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+        header.classList.toggle('is-solid', window.scrollY > 40);
+      }
+
+      sync();
+      window.addEventListener('scroll', sync, { passive: true });
+      window.addEventListener('resize', sync);
+    })();
+  </script>
+</body>
+</html>

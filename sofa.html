@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>沙发 · 建模 · 3dsmax学习日志</title>
+  <meta name="description" content="3ds Max 沙发建模练习记录：思路、步骤与参数笔记。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">3ds</span>
+        <span class="brand__name">3dsmax学习日志</span>
+      </a>
+      <nav class="site-nav" aria-label="站点导航">
+        <a href="index.html">首页</a>
+        <a href="modeling.html">建模</a>
+        <a href="sofa.html" aria-current="page">沙发</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <p class="breadcrumb"><a href="index.html">首页</a> / <a href="modeling.html">建模</a> / 沙发</p>
+        <h1 class="page-title">沙发</h1>
+        <p class="page-lead">
+          建模练习第一件：一张布艺沙发。目标是把参考图里那种厚实、圆润的坐垫感觉做出来，
+          顺便把可编辑多边形的基本操作过一遍。
+        </p>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="wrap">
+        <div class="log">
+          <div class="log__main">
+            <section>
+              <h2 class="section-title">练习目标</h2>
+              <p>
+                先做出沙发的整体比例，再处理坐垫的圆角和布面的褶皱。
+                重点是练手感：知道什么时候用基础几何体拼，什么时候转成可编辑多边形手动调点。
+              </p>
+            </section>
+
+            <section>
+              <h2 class="section-title">制作步骤</h2>
+              <ol class="step-list">
+                <li>
+                  <strong>参考图与比例</strong>
+                  <span>导入参考图，按真实尺寸把沙发定在 200 × 90 × 80 cm 左右，先用长方体打底。</span>
+                </li>
+                <li>
+                  <strong>拼出大体块</strong>
+                  <span>用长方体分别做底座、靠背、两个扶手，通过移动和缩放对齐，先保证大形准。</span>
+                </li>
+                <li>
+                  <strong>转可编辑多边形</strong>
+                  <span>底座加分段后转成可编辑多边形，选中面挤出，把坐垫的厚度做出来。</span>
+                </li>
+                <li>
+                  <strong>加圆角</strong>
+                  <span>给边缘加切角，再用涡轮平滑看整体效果，注意边线太密的地方要收一收。</span>
+                </li>
+                <li>
+                  <strong>布面细节</strong>
+                  <span>用细化加位移做出微弱的布面起伏，褶皱的地方手动调点，避免看起来像硬塑料。</span>
+                </li>
+                <li>
+                  <strong>整理与检查</strong>
+                  <span>重置变换、检查法线方向、清理多余的历史记录，确认模型可以继续上材质。</span>
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h2 class="section-title">过程截图</h2>
+              <p>把每一步的截图放进来，方便对比改之前和改之后的效果。</p>
+              <div class="shot">截图位置：这里替换成你自己的渲染图或视图截图</div>
+            </section>
+
+            <section>
+              <h2 class="section-title">踩坑记录</h2>
+              <table class="note-table">
+                <caption>记录练习中遇到的问题和解决办法。</caption>
+                <tbody>
+                  <tr>
+                    <th>平滑后变软塌</th>
+                    <td>涡轮平滑层级开太高，把边缘的切角线加回来以后形状就立住了。</td>
+                  </tr>
+                  <tr>
+                    <th>坐垫接缝漏光</th>
+                    <td>两个面没有完全贴合，选中相邻边用焊接点把缝隙合上。</td>
+                  </tr>
+                  <tr>
+                    <th>待补充</th>
+                    <td>继续练习中，遇到新问题随时补在这张表里。</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section>
+              <h2 class="section-title">小结</h2>
+              <p>
+                这一遍最大的收获是理解了「先大形后细节」：比例没定下来就去抠圆角，
+                后面只会反复返工。下一张沙发准备尝试用布料修改器做更自然的褶皱。
+              </p>
+            </section>
+
+            <p class="back-link">
+              <a href="modeling.html">← 返回建模</a>
+              <a href="index.html">返回首页</a>
+            </p>
+          </div>
+
+          <aside class="log__side">
+            <div class="side-card">
+              <h2 class="side-card__title">练习信息</h2>
+              <dl class="side-card__list">
+                <div>
+                  <dt>分类</dt>
+                  <dd>建模 · 家具</dd>
+                </div>
+                <div>
+                  <dt>软件版本</dt>
+                  <dd>3ds Max（待补充）</dd>
+                </div>
+                <div>
+                  <dt>练习日期</dt>
+                  <dd>待补充</dd>
+                </div>
+                <div>
+                  <dt>用时</dt>
+                  <dd>待补充</dd>
+                </div>
+                <div>
+                  <dt>难度</dt>
+                  <dd>入门</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="side-card">
+              <h2 class="side-card__title">用到的命令</h2>
+              <p class="side-card__body">
+                长方体 · 可编辑多边形 · 挤出 · 切角 · 涡轮平滑 · 细化 · 位移
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>© 2026 3dsmax学习日志</span>
+      <span class="site-footer__note">内容持续更新中</span>
+    </div>
+  </footer>
+</body>
+</html>
