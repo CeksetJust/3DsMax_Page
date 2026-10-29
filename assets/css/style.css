@@ -511,6 +511,23 @@ h1, h2, h3 {
   box-shadow: var(--shadow);
 }
 
+.shot--placeholder {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1848 / 1143;
+  padding: 32px;
+  text-align: center;
+  background: var(--surface-soft);
+  border-style: dashed;
+}
+
+.shot__placeholder-text {
+  max-width: 30ch;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
 .shot img {
   width: 100%;
   height: auto;
