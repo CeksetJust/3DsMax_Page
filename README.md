@@ -9,6 +9,9 @@
 ├── index.html          首页：顶部展示图片 + 标题「3dsmax学习日志」+ 卡片「建模」
 ├── modeling.html       建模页：卡片「沙发」
 ├── sofa.html           沙发页：练习目标 / 步骤 / 截图 / 踩坑记录 / 小结
+├── bookshelf.html      书柜页：练习目标 / 步骤 / 结果截图
+├── phone.html          手机页：练习目标 / 步骤 / 结果截图
+├── computer.html       电脑页：练习目标 / 步骤 / 结果截图
 └── assets/
     ├── css/style.css   全站样式（改 :root 里的 --accent 就能整体换主色）
     └── img/
@@ -19,7 +22,11 @@
 页面跳转关系：
 
 ```
-index.html --卡片「建模」--> modeling.html --卡片「沙发」--> sofa.html
+index.html --卡片「建模」--> modeling.html
+                                  ├─ 沙发 --> sofa.html
+                                  ├─ 书柜 --> bookshelf.html
+                                  ├─ 手机 --> phone.html
+                                  └─ 电脑 --> computer.html
 ```
 
 ## 常见修改
